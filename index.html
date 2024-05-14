@@ -22,6 +22,7 @@
             padding: 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between; /* 增加这一行以便水平排列 */
             position: relative;
         }
         header img {
@@ -39,37 +40,26 @@
             margin: 5px 0 0;
             font-size: 1.2em;
         }
-        main {
-            display: flex;
-            flex: 1;
-            background: linear-gradient(135deg, #ffa6c9, #ffcc99); /* 粉色到橙色的渐变 */
-        }
         nav {
-            padding: 20px;
-            width: 250px;
-            background: linear-gradient(135deg, #ff9966, #e6ccff); /* 淡紫色到深橙色的渐变 */
-            display: flex;
-            flex-direction: column;
+            display: flex; /* 改为水平排列 */
             align-items: center;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #ff9966, #e6ccff); /* 淡紫色到深橙色的渐变 */
         }
         nav a {
             color: #ffcc99;
-            margin: 15px 0;
+            margin: 0 15px;
             text-decoration: none;
             font-size: 18px; 
             transition: color 0.3s ease;
-            width: 100%;
             text-align: center;
         }
         nav a:hover {
             color: #800080;
         }
-        nav hr {
-            width: 80%;
-            border: 0;
-            border-top: 1px solid #ffcc99;
-            margin: 10px 0;
+        main {
+            display: flex;
+            flex: 1;
+            background: linear-gradient(135deg, #ffa6c9, #ffcc99); /* 粉色到橙色的渐变 */
         }
         .content {
             flex: 1;
@@ -137,28 +127,24 @@
 </head>
 <body>
     <header>
-        <img src="Evelyn.png" alt="头像">
-        <div>
-            <h1>KRISHU</h1>
-            <p>身不由己去打野</p>
+        <div style="display: flex; align-items: center;">
+            <img src="Evelyn.png" alt="头像">
+            <div>
+                <h1>KRISHU</h1>
+                <p>身不由己去打野</p>
+            </div>
         </div>
-    </header>
-    <main>
         <nav>
             <a href="#about">个人简介</a>
-            <hr>
             <a href="#experience">工作经历</a>
-            <hr>
             <a href="#projects">项目展示</a>
-            <hr>
             <a href="#skills">技能</a>
-            <hr>
             <a href="#education">教育背景</a>
-            <hr>
             <a href="#hobbies">个人爱好</a>
-            <hr>
             <a href="#blog">博客文章</a>
         </nav>
+    </header>
+    <main>
         <div class="content">
             <section id="about" class="about">
                 <h2>个人简介</h2>
