@@ -6,7 +6,7 @@
     <title>个人网页</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 18px; /* 设置基础字体大小 */
             margin: 0;
             padding: 0;
@@ -14,6 +14,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
+            color: #333;
         }
         header {
             background-color: #ff6600;
@@ -21,44 +22,75 @@
             padding: 20px;
             display: flex;
             align-items: center;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff6600 30%, #ff9933 70%);
+            z-index: -1;
         }
         header img {
             border-radius: 50%;
             width: 80px;
             height: 80px;
             margin-right: 20px;
+            border: 3px solid white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
         }
         main {
             display: flex;
             flex: 1;
+            background: linear-gradient(135deg, #66cc33 30%, #99ff66 70%);
         }
         nav {
-            background-color: #66cc33;
             padding: 20px;
-            width: 200px;
+            width: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
         }
         nav a {
             color: white;
-            margin: 10px 0;
+            margin: 15px 0;
             text-decoration: none;
             font-size: 20px; /* 调整导航链接的字体大小 */
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6600;
         }
         .content {
             flex: 1;
-            padding: 20px;
+            padding: 40px;
+            background: white;
+            box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+            clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
         .content section {
-            margin-bottom: 20px;
-            background-color: white;
+            margin-bottom: 40px;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #ff9933 30%, #ffcc66 70%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
         }
         h2 {
-            color: #ff6600;
+            color: #333;
             font-size: 24px; /* 调整标题的字体大小 */
+            margin-bottom: 10px;
         }
         p {
             font-size: 18px; /* 调整段落的字体大小 */
@@ -67,9 +99,8 @@
             background-color: #ff6600;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
         }
-        /* 添加不同颜色的样式 */
         .content h2 {
             color: #ff6600; /* 标题颜色 */
         }
