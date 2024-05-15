@@ -24,6 +24,7 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
+            flex-wrap: wrap;
         }
         header img {
             border-radius: 50%;
@@ -43,7 +44,9 @@
         }
         nav {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            width: 100%;
         }
         nav a {
             color: #ffffff;
@@ -52,6 +55,9 @@
             font-size: 18px;
             transition: color 0.3s ease;
             text-align: center;
+            flex: 1 1 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
         }
         nav a:hover {
             color: #9400D3;
@@ -105,6 +111,9 @@
         .music-festival h2 {
             color: #8A2BE2;
         }
+        .civilization h2 {
+            color: #FF00FF; /* 洋红色 */
+        }
         p {
             font-size: 16px;
             color: #228B22;
@@ -138,6 +147,7 @@
             <a href="#blog">博客文章</a>
             <a href="#book-notes">读书摘录</a>
             <a href="#music-festival">音乐盛典</a>
+            <a href="#civilization">晓以文明</a>
         </nav>
     </header>
     <main>
@@ -187,6 +197,10 @@
             <section id="music-festival" class="music-festival">
                 <h2>音乐盛典</h2>
                 <p>！！</p>
+            </section>
+            <section id="civilization" class="civilization">
+                <h2>晓以文明</h2>
+                <p>科幻。</p>
             </section>
         </div>
     </main>
