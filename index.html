@@ -24,7 +24,6 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
-            flex-wrap: wrap;
         }
         .header-content {
             display: flex;
@@ -47,11 +46,16 @@
             font-size: 1.2em;
             color: #9932CC; 
         }
+        .nav-container {
+            display: flex;
+            justify-content: flex-end; /* 使导航栏靠右排列 */
+            align-items: center;
+            width: 100%;
+        }
         nav {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-end; /* 使导航栏靠右排列 */
-            width: 100%;
+            align-items: center;
         }
         nav a {
             color: #ffffff;
@@ -142,18 +146,20 @@
                 <p>身不由己去打野</p>
             </div>
         </div>
-        <nav>
-            <a href="#about">个人简介</a>
-            <a href="#experience">工作经历</a>
-            <a href="#projects">项目展示</a>
-            <a href="#skills">专业技能</a>
-            <a href="#education">教育背景</a>
-            <a href="#hobbies">个人爱好</a>
-            <a href="#blog">博客文章</a>
-            <a href="#book-notes">读书摘录</a>
-            <a href="#music-festival">音乐盛典</a>
-            <a href="#civilization">晓以文明</a>
-        </nav>
+        <div class="nav-container">
+            <nav>
+                <a href="#about">个人简介</a>
+                <a href="#experience">工作经历</a>
+                <a href="#projects">项目展示</a>
+                <a href="#skills">专业技能</a>
+                <a href="#education">教育背景</a>
+                <a href="#hobbies">个人爱好</a>
+                <a href="#blog">博客文章</a>
+                <a href="#book-notes">读书摘录</a>
+                <a href="#music-festival">音乐盛典</a>
+                <a href="#civilization">晓以文明</a>
+            </nav>
+        </div>
     </header>
     <main>
         <div class="content">
