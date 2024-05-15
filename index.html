@@ -136,9 +136,24 @@
         footer p {
             color: #ffffff;
         }
+        .top-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #9400D3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .top-button:hover {
+            background-color: #9932CC;
+        }
     </style>
 </head>
 <body>
+    <button class="top-button" onclick="playAudio()">播放背景音乐</button>
     <header>
         <div class="header-content">
             <img src="Evelyn.png" alt="头像">
@@ -221,7 +236,6 @@
             <p>联系方式：15979595635</p>
         </div>
     </footer>
-    <button onclick="playAudio()">播放背景音乐</button>
     <audio id="background-audio" loop>
         <source src="lizhichangzhou.mp3" type="audio/mpeg">
         您的浏览器不支持音频元素。
