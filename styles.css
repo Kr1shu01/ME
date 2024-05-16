@@ -23,6 +23,7 @@ header {
 .header-content {
     display: flex;
     align-items: center;
+    padding-left: 40px; 
 }
 .header-content div {
     display: flex;
