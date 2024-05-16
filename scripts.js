@@ -32,5 +32,6 @@ function startRelax() {
         'https://proxx.app/',
         'https://pinball.flutter.dev/'
     ];
-    window.location.href = games[Math.floor(Math.random() * games.length)];
+    const randomGame = games[Math.floor(Math.random() * games.length)];
+    window.open(randomGame, '_blank');
 }
