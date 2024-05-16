@@ -35,3 +35,15 @@ function startRelax() {
     const randomGame = games[Math.floor(Math.random() * games.length)];
     window.open(randomGame, '_blank');
 }
+
+function openAC() {
+    window.open('https://wxurl.cn/PME', '_blank');
+}
+
+function openTV() {
+    window.open('https://wxurl.cn/36C', '_blank');
+}
+
+function openConsole() {
+    window.open('http://yx.1dly.cn/', '_blank');
+}
