@@ -30,7 +30,6 @@
         .header-content {
             display: flex;
             align-items: center;
-            padding-left: 40px;
         }
         .header-content div {
             display: flex;
@@ -95,7 +94,7 @@
         }
         .nav-container {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
         }
@@ -191,19 +190,19 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="Evelyn.png" alt="头像">
-            <div>
-                <h1>KRISHU</h1>
-                <p>身不由己去打野</p>
-            </div>
-        </div>
-        <div class="button-container">
-            <button class="play-button" onclick="playAudio()">播放背景音乐</button>
-            <button class="theme-button" onclick="toggleTheme()">切换主题颜色</button>
-            <button class="relax-button" onclick="startRelax()">开始轻松一下</button>
-        </div>
         <div class="nav-container">
+            <div class="button-container">
+                <button class="play-button" onclick="playAudio()">播放背景音乐</button>
+                <button class="theme-button" onclick="toggleTheme()">切换主题颜色</button>
+                <button class="relax-button" onclick="startRelax()">开始轻松一下</button>
+            </div>
+            <div class="header-content">
+                <img src="Evelyn.png" alt="头像">
+                <div>
+                    <h1>KRISHU</h1>
+                    <p>身不由己去打野</p>
+                </div>
+            </div>
             <nav>
                 <a href="#about">个人简介</a>
                 <a href="#experience">工作经历</a>
