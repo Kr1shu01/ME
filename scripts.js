@@ -51,5 +51,11 @@ function toggleTheme() {
 }
 
 function startRelax() {
-    window.location.href = 'https://play2048.co/';
+    const games = [
+        'https://play2048.co/',
+        'https://playsnake.org/',
+        'https://hextris.io/'
+    ];
+    const randomGame = games[Math.floor(Math.random() * games.length)];
+    window.location.href = randomGame;
 }
