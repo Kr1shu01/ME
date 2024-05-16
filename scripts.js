@@ -53,7 +53,7 @@ function toggleTheme() {
 function startRelax() {
     var userAgent = navigator.userAgent;
     if (userAgent.includes('Chrome') && !userAgent.includes('Edg')) {
-        window.location.href = 'https://chromedino.com/'; // 替换为在线版本的恐龙游戏
+        window.location.href = 'chrome://dino/'; // 替换为在线版本的恐龙游戏
     } else if (userAgent.includes('Edg')) {
         window.location.href = 'https://microsoftedge.github.io/Demos/surf/'; // 替换为在线版本的冲浪游戏
     } else {
