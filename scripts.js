@@ -55,7 +55,7 @@ function startRelax() {
     if (userAgent.includes('Chrome') && !userAgent.includes('Edg')) {
         window.location.href = 'chrome://dino/'; // 替换为在线版本的恐龙游戏
     } else if (userAgent.includes('Edg')) {
-        window.location.href = 'https://microsoftedge.github.io/Demos/surf/'; // 替换为在线版本的冲浪游戏
+        window.location.href = 'edge://surf/'; // 替换为在线版本的冲浪游戏
     } else {
         window.location.href = 'https://play2048.co/';
     }
