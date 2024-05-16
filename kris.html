@@ -56,14 +56,9 @@
         }
         .button-container {
             display: flex;
+            flex-direction: column;
             gap: 10px;
             margin-left: 20px;
-        }
-        .play-button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
         }
         .play-button {
             padding: 10px 20px;
@@ -74,6 +69,28 @@
             cursor: pointer;
         }
         .play-button:hover {
+            background-color: #9932CC;
+        }
+        .theme-button {
+            padding: 10px 20px;
+            background-color: #BA55D3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .theme-button:hover {
+            background-color: #9932CC;
+        }
+        .relax-button {
+            padding: 10px 20px;
+            background-color: #BA55D3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .relax-button:hover {
             background-color: #9932CC;
         }
         .nav-container {
@@ -170,17 +187,6 @@
         footer p {
             color: #ffffff;
         }
-        .theme-button {
-            padding: 10px 20px;
-            background-color: #BA55D3;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .theme-button:hover {
-            background-color: #9932CC;
-        }
     </style>
 </head>
 <body>
@@ -195,22 +201,23 @@
         <div class="button-container">
             <button class="play-button" onclick="playAudio()">播放背景音乐</button>
             <button class="theme-button" onclick="toggleTheme()">切换主题颜色</button>
+            <button class="relax-button" onclick="startRelax()">开始轻松一下</button>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <a href="#about">个人简介</a>
+                <a href="#experience">工作经历</a>
+                <a href="#projects">项目展示</a>
+                <a href="#skills">专业技能</a>
+                <a href="#education">教育背景</a>
+                <a href="#hobbies">个人爱好</a>
+                <a href="#blog">博客文章</a>
+                <a href="#book-notes">读书摘录</a>
+                <a href="#music-festival">音乐盛典</a>
+                <a href="#civilization">晓以文明</a>
+            </nav>
         </div>
     </header>
-    <div class="nav-container">
-        <nav>
-            <a href="#about">个人简介</a>
-            <a href="#experience">工作经历</a>
-            <a href="#projects">项目展示</a>
-            <a href="#skills">专业技能</a>
-            <a href="#education">教育背景</a>
-            <a href="#hobbies">个人爱好</a>
-            <a href="#blog">博客文章</a>
-            <a href="#book-notes">读书摘录</a>
-            <a href="#music-festival">音乐盛典</a>
-            <a href="#civilization">晓以文明</a>
-        </nav>
-    </div>
     <main>
         <div class="content">
             <section id="about" class="about">
@@ -262,9 +269,7 @@
     </footer>
     <audio id="background-audio" loop>
         <source src="lizhichangzhou.mp3" type="audio/mpeg">
-        您的浏览器不
-
-支持音频元素。
+        您的浏览器不支持音频元素。
     </audio>
     <script>
         function playAudio() {
@@ -317,6 +322,17 @@
                 section.style.background = theme.sectionBg;
             });
             document.querySelector('footer').style.background = theme.footerBg;
+        }
+
+        function startRelax() {
+            var userAgent = navigator.userAgent;
+            if (userAgent.includes('Chrome') && !userAgent.includes('Edg')) {
+                window.location.href = 'chrome://dino';
+            } else if (userAgent.includes('Edg')) {
+                window.location.href = 'edge://surf';
+            } else {
+                window.location.href = 'https://play2048.co/';
+            }
         }
     </script>
 </body>
