@@ -22,12 +22,12 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 20px; /* 调整这个值来改变头像和标题离左边的距离 */
 }
 .header-content div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* 调整这个值来改变标题和描述的对齐方式 */
 }
 header img {
     border-radius: 50%;
@@ -44,15 +44,15 @@ header p {
     margin: 5px 0 0;
     font-size: 1.2em;
     color: #9932CC;
-    text-align: center;
+    text-align: left; /* 调整这个值来改变描述的对齐方式 */
 }
 .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
     margin-left: 20px;
 }
-.play-button, .theme-button, .relax-button {
+button {
     padding: 10px 20px;
     background-color: #BA55D3;
     color: white;
@@ -60,7 +60,7 @@ header p {
     border-radius: 5px;
     cursor: pointer;
 }
-.play-button:hover, .theme-button:hover, .relax-button:hover {
+button:hover {
     background-color: #9932CC;
 }
 .nav-container {
