@@ -54,7 +54,10 @@ function startRelax() {
     const games = [
         'https://play2048.co/',
         'https://playsnake.org/',
-        'https://hextris.io/'
+        'https://hextris.io/',
+        'https://minesweeperonline.com/',
+        'https://sudoku.com/',
+        'https://www.bubbleshooter.net/'
     ];
     const randomGame = games[Math.floor(Math.random() * games.length)];
     window.location.href = randomGame;
