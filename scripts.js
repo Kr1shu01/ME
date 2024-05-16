@@ -26,9 +26,11 @@ function startRelax() {
         'https://play2048.co/',
         'https://playsnake.org/',
         'https://hextris.io/',
-        'https://minesweeperonline.com/',
         'https://sudoku.com/',
-        'https://www.bubbleshooter.net/'
+        'https://www.bubbleshooter.net/',
+        'https://liferestart.syaro.io/public/index.html',
+        'https://proxx.app/',
+        'https://pinball.flutter.dev/'
     ];
     window.location.href = games[Math.floor(Math.random() * games.length)];
 }
