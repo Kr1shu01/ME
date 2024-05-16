@@ -10,6 +10,7 @@ body {
     color: #333;
     transition: background 0.3s ease;
 }
+
 header {
     background: linear-gradient(90deg, #FF69B4, #FFB6C1);
     color: white;
@@ -19,16 +20,19 @@ header {
     justify-content: space-between;
     transition: background 0.3s ease;
 }
+
 .header-content {
     display: flex;
     align-items: center;
     padding-left: 20px; /* 调整这个值来改变头像和标题离左边的距离 */
 }
+
 .header-content div {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* 调整这个值来改变标题和描述的对齐方式 */
 }
+
 header img {
     border-radius: 50%;
     width: 80px;
@@ -36,22 +40,26 @@ header img {
     margin-right: 20px;
     border: 3px solid white;
 }
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
 }
+
 header p {
     margin: 5px 0 0;
     font-size: 1.2em;
     color: #9932CC;
     text-align: left; /* 调整这个值来改变描述的对齐方式 */
 }
+
 .button-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin-left: 20px;
 }
+
 button {
     padding: 10px 20px;
     background-color: #BA55D3;
@@ -60,21 +68,25 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #9932CC;
 }
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: 50%;
 }
+
 nav a {
     color: #ffffff;
     margin: 0 5px;
@@ -86,15 +98,18 @@ nav a {
     box-sizing: border-box;
     padding: 10px 0;
 }
+
 nav a:hover {
     color: #9400D3;
 }
+
 main {
     display: flex;
     flex: 1;
     background: linear-gradient(90deg, #FF69B4, #FFB6C1);
     transition: background 0.3s ease;
 }
+
 .content {
     flex: 1;
     padding: 40px;
@@ -102,6 +117,7 @@ main {
     box-shadow: -10px 0 20px rgba(0,0,0,0.1);
     transition: background 0.3s ease;
 }
+
 .content section {
     margin-bottom: 40px;
     padding: 20px;
@@ -110,10 +126,12 @@ main {
     border-radius: 10px;
     transition: background 0.3s ease;
 }
+
 h2 {
     font-size: 22px;
     margin-bottom: 10px;
 }
+
 .about h2 { color: #20B2AA; }
 .experience h2 { color: #6495ED; }
 .projects h2 { color: #7B68EE; }
@@ -124,16 +142,30 @@ h2 {
 .book-notes h2 { color: #32CD32; }
 .music-festival h2 { color: #2E8B57; }
 .civilization h2 { color: #000000; }
+
 p {
     font-size: 16px;
     color: #228B22;
 }
+
 footer {
     background: linear-gradient(90deg, #FF69B4, #FFB6C1);
     text-align: center;
     padding: 20px;
     transition: background 0.3s ease;
 }
+
 footer p {
     color: #ffffff;
+}
+
+.title-with-icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;  /* 设置图标宽度 */
+    height: 20px; /* 设置图标高度 */
+    margin-right: 8px; /* 图标与文字之间的间距 */
 }
