@@ -15,6 +15,7 @@
             flex-direction: column;
             height: 100vh;
             color: #333;
+            transition: background 0.3s ease;
         }
         header {
             background: linear-gradient(90deg, #FF69B4, #FFB6C1);
@@ -24,6 +25,7 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
+            transition: background 0.3s ease;
         }
         .header-content {
             display: flex;
@@ -100,12 +102,14 @@
             display: flex;
             flex: 1;
             background: linear-gradient(90deg, #FF69B4, #FFB6C1);
+            transition: background 0.3s ease;
         }
         .content {
             flex: 1;
             padding: 40px;
             background: linear-gradient(90deg, #FF69B4, #FFB6C1);
             box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+            transition: background 0.3s ease;
         }
         .content section {
             margin-bottom: 40px;
@@ -113,6 +117,7 @@
             background: linear-gradient(45deg, #FFCC99, #FFA07A);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             border-radius: 10px;
+            transition: background 0.3s ease;
         }
         h2 {
             font-size: 22px;
@@ -156,9 +161,24 @@
             background: linear-gradient(90deg, #FF69B4, #FFB6C1);
             text-align: center;
             padding: 20px;
+            transition: background 0.3s ease;
         }
         footer p {
             color: #ffffff;
+        }
+        .theme-button {
+            padding: 10px 20px;
+            background-color: #BA55D3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .theme-button:hover {
+            background-color: #9932CC;
         }
     </style>
 </head>
@@ -188,6 +208,7 @@
                 <a href="#civilization">晓以文明</a>
             </nav>
         </div>
+        <button class="theme-button" onclick="toggleTheme()">切换主题颜色</button>
     </header>
     <main>
         <div class="content">
@@ -250,6 +271,49 @@
             } else {
                 audio.pause();
             }
+        }
+
+        const themes = [
+            {
+                bodyBg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)',
+                headerBg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)',
+                mainBg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)',
+                contentBg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)',
+                sectionBg: 'linear-gradient(45deg, #FFCC99, #FFA07A)',
+                footerBg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)'
+            },
+            {
+                bodyBg: 'linear-gradient(90deg, #00BFFF, #1E90FF)',
+                headerBg: 'linear-gradient(90deg, #00BFFF, #1E90FF)',
+                mainBg: 'linear-gradient(90deg, #00BFFF, #1E90FF)',
+                contentBg: 'linear-gradient(90deg, #00BFFF, #1E90FF)',
+                sectionBg: 'linear-gradient(45deg, #ADD8E6, #87CEFA)',
+                footerBg: 'linear-gradient(90deg, #00BFFF, #1E90FF)'
+            },
+            {
+                bodyBg: 'linear-gradient(90deg, #3CB371, #2E8B57)',
+                headerBg: 'linear-gradient(90deg, #3CB371, #2E8B57)',
+                mainBg: 'linear-gradient(90deg, #3CB371, #2E8B57)',
+                contentBg: 'linear-gradient(90deg, #3CB371, #2E8B57)',
+                sectionBg: 'linear-gradient(45deg, #98FB98, #00FA9A)',
+                footerBg: 'linear-gradient(90deg, #3CB371, #2E8B57)'
+            }
+        ];
+
+        let currentTheme = 0;
+
+        function toggleTheme() {
+            currentTheme = (currentTheme + 1) % themes.length;
+            const theme = themes[currentTheme];
+
+            document.body.style.background = theme.bodyBg;
+            document.querySelector('header').style.background = theme.headerBg;
+            document.querySelector('main').style.background = theme.mainBg;
+            document.querySelector('.content').style.background = theme.contentBg;
+            document.querySelectorAll('.content section').forEach(section => {
+                section.style.background = theme.sectionBg;
+            });
+            document.querySelector('footer').style.background = theme.footerBg;
         }
     </script>
 </body>
