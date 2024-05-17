@@ -156,7 +156,7 @@ p {
 }
 
 footer {
-    background: linear-gradient(90deg, #000000, #FFB6C1);
+    background: linear-gradient(90deg, #FF69B4, #FFB6C1);
     text-align: center;
     padding: 20px;
     transition: background 0.3s ease;
