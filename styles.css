@@ -188,8 +188,8 @@ footer p {
 .dropdown-button {
     background-color: transparent;
     border: none;
-    width: 100px;
-    height: 50px;
+    width: 200px;
+    height: 25px;
     cursor: pointer;
     opacity: 0.5;
 }
@@ -208,6 +208,7 @@ footer p {
     z-index: 1001;
     border-radius: 5px;
     overflow: hidden;
+    width: 200px;
 }
 
 .dropdown-menu a {
