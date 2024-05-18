@@ -188,14 +188,18 @@ footer p {
 .dropdown-button {
     background-color: transparent;
     border: none;
-    width: 200px;
-    height: 25px;
+    width: 200px; /* 将宽度增加一倍 */
+    height: 50px;
     cursor: pointer;
     opacity: 0.5;
 }
 
 .dropdown-button:hover {
     opacity: 1;
+}
+
+.dropdown-container:hover .dropdown-menu {
+    display: block;
 }
 
 .dropdown-menu {
@@ -208,7 +212,7 @@ footer p {
     z-index: 1001;
     border-radius: 5px;
     overflow: hidden;
-    width: 200px;
+    width: 200px; /* 设置下拉菜单的宽度 */
 }
 
 .dropdown-menu a {
@@ -222,6 +226,7 @@ footer p {
 .dropdown-menu a:hover {
     background-color: rgba(200, 200, 200, 0.8);
 }
+
 
 video {
     display: none;
