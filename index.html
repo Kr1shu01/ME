@@ -64,11 +64,27 @@
         </div>
     </main>
     <footer>
-       <p>联系方式：15979595635</p>
+        <p>联系方式：15979595635</p>
     </footer>
     <audio id="background-audio" loop>
         <source src="lizhichangzhou.mp3" type="audio/mpeg">您的浏览器不支持音频元素。
     </audio>
+
+    <!-- 添加透明按钮和下拉菜单 -->
+    <div class="dropdown-container">
+        <button class="dropdown-button" onclick="toggleDropdown()"></button>
+        <div id="dropdown-menu" class="dropdown-menu">
+            <a href="#" onclick="playVideo('video1.mp4')">视频1</a>
+            <a href="#" onclick="playVideo('video2.mp4')">视频2</a>
+            <a href="#" onclick="playVideo('video3.mp4')">视频3</a>
+        </div>
+    </div>
+
+    <video id="video-player" controls style="display:none; position:fixed; bottom:10px; right:10px; width:300px;">
+        <source id="video-source" src="" type="video/mp4">
+        您的浏览器不支持HTML5视频。
+    </video>
+
     <script src="scripts.js"></script>
 </body>
 </html>
