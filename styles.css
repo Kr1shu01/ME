@@ -213,6 +213,7 @@ footer p {
     border-radius: 5px;
     overflow: hidden;
     width: 200px; /* 设置下拉菜单的宽度 */
+    font-size: 16px;
 }
 
 .dropdown-menu a {
