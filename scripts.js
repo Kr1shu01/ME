@@ -57,3 +57,12 @@ function toggleDropdown() {
 function navigateToLink(videoLink) {
     window.open(videoLink, '_blank');
 }
+
+// 点击页面其他地方时隐藏下拉菜单
+document.addEventListener('click', function(event) {
+    const dropdownContainer = document.querySelector('.dropdown-container');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    if (!dropdownContainer.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+    }
+});
