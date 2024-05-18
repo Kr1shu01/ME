@@ -71,14 +71,16 @@
     </audio>
 
     <!-- 添加透明按钮和下拉菜单 -->
+   <!-- 添加透明按钮和下拉菜单 -->
     <div class="dropdown-container">
-        <button class="dropdown-button" onclick="toggleDropdown()"></button>
-        <div id="dropdown-menu" class="dropdown-menu">
-        <a href="#" onclick="navigateToLink('https://www.bilibili.com/video/BV1xa411e7SC/?share_source=copy_web&vd_source=2fb33c4bf969e78e1d2f94a3f11bee75')">五月的花海</a>
-        <a href="#" onclick="navigateToLink('https://mp.weixin.qq.com/s/VkcuAT4JkAW3a8F90HUiyQ')">启航未来</a>
-        <a href="#" onclick="navigateToLink('https://example.com/video3')">融媒体之歌</a>
+        <button class="dropdown-button"></button>
+        <div class="dropdown-menu">
+            <a href="#" onclick="navigateToLink('https://www.bilibili.com/video/BV1xa411e7SC/?share_source=copy_web&vd_source=2fb33c4bf969e78e1d2f94a3f11bee75')">五月的花海</a>
+            <a href="#" onclick="navigateToLink('https://mp.weixin.qq.com/s/VkcuAT4JkAW3a8F90HUiyQ')">启航未来</a>
+            <a href="#" onclick="navigateToLink('https://example.com/video3')">融媒体之歌</a>
         </div>
     </div>
+
 
     <video id="video-player" controls style="display:none; position:fixed; bottom:10px; right:10px; width:300px;">
         <source id="video-source" src="" type="video/mp4">
