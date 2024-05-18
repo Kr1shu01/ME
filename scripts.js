@@ -47,3 +47,18 @@ function openTV() {
 function openConsole() {
     window.open('http://yx.1dly.cn/', '_blank');
 }
+
+// 添加透明按钮和下拉菜单的功能
+function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+}
+
+function playVideo(videoFile) {
+    const videoPlayer = document.getElementById('video-player');
+    const videoSource = document.getElementById('video-source');
+    videoSource.src = `video/${videoFile}`;
+    videoPlayer.style.display = 'block';
+    videoPlayer.load();
+    videoPlayer.play();
+}
