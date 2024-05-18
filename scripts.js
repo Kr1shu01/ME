@@ -54,11 +54,6 @@ function toggleDropdown() {
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 }
 
-function playVideo(videoFile) {
-    const videoPlayer = document.getElementById('video-player');
-    const videoSource = document.getElementById('video-source');
-    videoSource.src = `video/${videoFile}`;
-    videoPlayer.style.display = 'block';
-    videoPlayer.load();
-    videoPlayer.play();
+function navigateToLink(videoLink) {
+    window.open(videoLink, '_blank');
 }
