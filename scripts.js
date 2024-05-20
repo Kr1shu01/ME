@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const playPauseButton = document.querySelector('.play-pause-button');
     const nextButton = document.querySelector('.next-button');
-    const menuButton = document.querySelector('.menu-button');
     const themeButton = document.querySelector('.theme-button');
     const relaxButton = document.querySelector('.relax-button');
     const acButton = document.querySelector('.ac-button');
     const tvButton = document.querySelector('.tv-button');
     const consoleButton = document.querySelector('.console-button');
-    const dropdownMenu = document.getElementById('dropdown-menu');
+    const menuButton = document.querySelector('.menu-button');
+    const menu = document.getElementById('menu');
 
+    // 添加事件监听器
     playPauseButton.addEventListener('click', togglePlayPause);
     nextButton.addEventListener('click', playRandom);
     themeButton.addEventListener('click', toggleTheme);
@@ -16,11 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     acButton.addEventListener('click', () => openLink('https://wxurl.cn/PME'));
     tvButton.addEventListener('click', () => openLink('https://wxurl.cn/36C'));
     consoleButton.addEventListener('click', () => openLink('http://yx.1dly.cn/'));
-    menuButton.addEventListener('click', toggleDropdown);
+    menuButton.addEventListener('click', toggleMenu);
 
+    // 隐藏下拉菜单
     document.addEventListener('click', function (event) {
-        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.style.display = 'none';
+        if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
+            menu.classList.add('hidden');
         }
     });
 });
@@ -47,8 +49,6 @@ const mp3Files = [
 let isPlaying = false;
 let isFirstPlay = true;
 
-audio.addEventListener('ended', playRandom);
-
 function togglePlayPause() {
     if (isPlaying) {
         audio.pause();
@@ -69,6 +69,7 @@ function playRandom() {
     const randomIndex = Math.floor(Math.random() * mp3Files.length);
     audio.src = mp3Files[randomIndex];
     audio.play();
+    audio.loop = true; // 循环播放
     document.querySelector('.play-pause-button').textContent = '驻乐';
     isPlaying = true;
 }
@@ -108,9 +109,9 @@ function openLink(url) {
 }
 
 // 下拉菜单
-function toggleDropdown() {
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
 }
 
 function navigateToLink(videoLink) {
