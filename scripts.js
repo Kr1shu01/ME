@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.add('hidden');
         }
     });
+
+    // 添加菜单项点击事件监听器
+    menu.querySelectorAll('a').forEach(item => {
+        item.addEventListener('click', (event) => {
+            event.stopPropagation();  // 防止事件冒泡
+            menu.classList.add('hidden');  // 点击后隐藏菜单
+        });
+    });
 });
 
 const audio = new Audio();
