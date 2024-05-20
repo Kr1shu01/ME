@@ -188,7 +188,7 @@ footer p {
 }
 
 .play-pause-button, .next-button {
-    padding: 10px 20px; /* 内填充 */
+    padding: 10px 15px; /* 内填充 */
     background-color: #BA55D3; /* 背景颜色 */
     color: white; /* 文本颜色 */
     border: none; /* 移除边框 */
