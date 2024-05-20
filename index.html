@@ -14,12 +14,14 @@
                 <div id="controls">
                     <button class="play-pause-button">流音</button>
                     <button class="next-button">迭曲</button>
+                    <button class="menu-button" onclick="toggleDropdown()">鸣辞</button>
+                    <button class="theme-button" onclick="toggleTheme()">易彩</button>
+                    <button class="empty-button"></button>
+                    <button class="relax-button" onclick="startRelax()">寻秘</button>
+                    <button class="ac-button" onclick="openAC()">风吟</button>
+                    <button class="tv-button" onclick="openTV()">雅幕</button>
+                    <button class="console-button" onclick="openConsole()">颂境</button>
                 </div>
-                <button class="ac-button" onclick="openAC()">风吟</button>
-                <button class="theme-button" onclick="toggleTheme()">易彩</button>
-                <button class="tv-button" onclick="openTV()">雅幕</button>
-                <button class="relax-button" onclick="startRelax()">寻秘</button>
-                <button class="console-button" onclick="openConsole()">颂境</button>
             </div>
             <div class="header-content">
                 <img src="images/Evelynn2.png" alt="头像">
@@ -69,10 +71,9 @@
     <footer>
         <p>联系方式：15979595635</p>
     </footer>
-    
-    <!-- 添加透明按钮和下拉菜单 -->
+
+    <!-- 右侧菜单 -->
     <div class="dropdown-container">
-        <button class="dropdown-button" onclick="toggleDropdown()"> </button>
         <div id="dropdown-menu" class="dropdown-menu">
             <a href="#" onclick="navigateToLink('https://www.bilibili.com/video/BV1xa411e7SC/?share_source=copy_web&vd_source=2fb33c4bf969e78e1d2f94a3f11bee75')">五月的花海</a>
             <a href="#" onclick="navigateToLink('https://mp.weixin.qq.com/s/VkcuAT4JkAW3a8F90HUiyQ')">启航未来</a>
