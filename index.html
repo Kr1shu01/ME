@@ -5,46 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>領域展開！</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/logo.png" type="image/png"> 
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <div class="button-container">
-                <div id="controls">
-                    <button class="play-pause-button">流音</button>
-                    <button class="next-button">迭曲</button>
-                    <button class="menu-button" onclick="toggleDropdown()">鸣辞</button>
-                    <button class="theme-button" onclick="toggleTheme()">易彩</button>
-                    <button class="empty-button"></button>
-                    <button class="relax-button" onclick="startRelax()">寻秘</button>
-                    <button class="ac-button" onclick="openAC()">风吟</button>
-                    <button class="tv-button" onclick="openTV()">雅幕</button>
-                    <button class="console-button" onclick="openConsole()">颂境</button>
-                </div>
+        <div class="header-content">
+            <img src="images/Evelynn2.png" alt="头像">
+            <div>
+                <h1>KRISHU</h1>
+                <p>身不由己去打野</p>
             </div>
-            <div class="header-content">
-                <img src="images/Evelynn2.png" alt="头像">
-                <div>
-                    <h1>KRISHU</h1>
-                    <p>身不由己去打野</p>
-                </div>
-            </div>
-            <nav>
-                <a href="#about">个人简介</a>
-                <a href="#experience">工作经历</a>
-                <a href="#projects">项目展示</a>
-                <a href="#skills">专业技能</a>
-                <a href="#education">教育背景</a>
-                <a href="#hobbies">个人爱好</a>
-                <a href="#blog">博客文章</a>
-                <a href="#book-notes">读书摘录</a>
-                <a href="#music-festival">音乐盛典</a>
-                <a href="#civilization">晓以文明</a>
-            </nav>
         </div>
+        <nav>
+            <a href="#about">个人简介</a>
+            <a href="#experience">工作经历</a>
+            <a href="#projects">项目展示</a>
+            <a href="#skills">专业技能</a>
+            <a href="#education">教育背景</a>
+            <a href="#hobbies">个人爱好</a>
+            <a href="#blog">博客文章</a>
+            <a href="#book-notes">读书摘录</a>
+            <a href="#music-festival">音乐盛典</a>
+            <a href="#civilization">晓以文明</a>
+        </nav>
     </header>
     <main>
+        <div class="button-container">
+            <button class="play-pause-button">流音</button>
+            <button class="next-button">迭曲</button>
+            <button class="menu-button">鸣辞</button>
+            <button class="theme-button">易彩</button>
+            <button class="empty-button"></button>
+            <button class="relax-button">寻秘</button>
+            <button class="ac-button">风吟</button>
+            <button class="tv-button">雅幕</button>
+            <button class="console-button">颂境</button>
+        </div>
+        <div id="dropdown-menu" class="dropdown-menu">
+            <a href="#" onclick="navigateToLink('https://www.bilibili.com/video/BV1xa411e7SC/?share_source=copy_web&vd_source=2fb33c4bf969e78e1d2f94a3f11bee75')">五月的花海</a>
+            <a href="#" onclick="navigateToLink('https://mp.weixin.qq.com/s/VkcuAT4JkAW3a8F90HUiyQ')">启航未来</a>
+            <a href="#" onclick="navigateToLink('https://v.qq.com/x/cover/mzc002002kqssyu/q4100vjztwh.html?j_vid=y41007hixcp&j_cut_vid=x4100fe2yzq&j_is_win_vid=1&j_start=0')">融媒体之歌</a>
+        </div>
         <div class="content">
             <div class="row">
                 <section id="about" class="about"><h2>个人简介</h2><p>在写作之路上踌躇前行，但是会一直热爱写作，哪怕山崩地裂，海枯石烂。</p></section>
@@ -71,16 +72,6 @@
     <footer>
         <p>联系方式：15979595635</p>
     </footer>
-
-    <!-- 右侧菜单 -->
-    <div class="dropdown-container">
-        <div id="dropdown-menu" class="dropdown-menu">
-            <a href="#" onclick="navigateToLink('https://www.bilibili.com/video/BV1xa411e7SC/?share_source=copy_web&vd_source=2fb33c4bf969e78e1d2f94a3f11bee75')">五月的花海</a>
-            <a href="#" onclick="navigateToLink('https://mp.weixin.qq.com/s/VkcuAT4JkAW3a8F90HUiyQ')">启航未来</a>
-            <a href="#" onclick="navigateToLink('https://v.qq.com/x/cover/mzc002002kqssyu/q4100vjztwh.html?j_vid=y41007hixcp&j_cut_vid=x4100fe2yzq&j_is_win_vid=1&j_start=0')">融媒体之歌</a>
-        </div>
-    </div>
-    
     <script src="scripts.js"></script>
 </body>
 </html>
