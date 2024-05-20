@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const playPauseButton = document.querySelector('.play-pause-button');
     const nextButton = document.querySelector('.next-button');
+    const menuButton = document.querySelector('.menu-button');
     const themeButton = document.querySelector('.theme-button');
     const relaxButton = document.querySelector('.relax-button');
     const acButton = document.querySelector('.ac-button');
     const tvButton = document.querySelector('.tv-button');
     const consoleButton = document.querySelector('.console-button');
-    const menuButton = document.querySelector('.menu-button');
     const dropdownMenu = document.getElementById('dropdown-menu');
 
-    // 添加事件监听器
     playPauseButton.addEventListener('click', togglePlayPause);
     nextButton.addEventListener('click', playRandom);
     themeButton.addEventListener('click', toggleTheme);
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     consoleButton.addEventListener('click', () => openLink('http://yx.1dly.cn/'));
     menuButton.addEventListener('click', toggleDropdown);
 
-    // 隐藏下拉菜单
     document.addEventListener('click', function (event) {
         if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
             dropdownMenu.style.display = 'none';
