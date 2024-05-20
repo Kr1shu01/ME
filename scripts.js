@@ -79,6 +79,7 @@ function playRandom() {
     document.querySelector('.play-pause-button').textContent = '暂停';
 }
 
+// 主题切换
 const themes = [
     { bg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)', secBg: 'linear-gradient(45deg, #FFCC99, #FFA07A)' },
     { bg: 'linear-gradient(90deg, #00BFFF, #1E90FF)', secBg: 'linear-gradient(45deg, #ADD8E6, #87CEFA)' },
@@ -97,6 +98,7 @@ function toggleTheme() {
     document.querySelector('footer').style.background = theme.bg;
 }
 
+// 轻松一下按钮
 function startRelax() {
     const games = [
         'https://play2048.co/', 'https://playsnake.org/', 'https://hextris.io/', 'https://sudoku.com/',
@@ -106,10 +108,12 @@ function startRelax() {
     window.open(games[Math.floor(Math.random() * games.length)], '_blank');
 }
 
+// 外部链接按钮
 function openLink(url) {
     window.open(url, '_blank');
 }
 
+// 下拉菜单
 function toggleDropdown() {
     const dropdownMenu = document.getElementById('dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
