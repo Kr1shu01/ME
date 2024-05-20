@@ -47,14 +47,20 @@ const mp3Files = [
     'music/youjianchuiyan.mp3'
 ];
 let isPlaying = false;
+let isFirstPlay = true;
 
 function togglePlayPause() {
     if (isPlaying) {
         audio.pause();
         document.querySelector('.play-pause-button').textContent = '流音';
     } else {
-        audio.play();
-        document.querySelector('.play-pause-button').textContent = '驻乐';
+        if (isFirstPlay) {
+            playRandom();
+            isFirstPlay = false;
+        } else {
+            audio.play();
+            document.querySelector('.play-pause-button').textContent = '驻乐';
+        }
     }
     isPlaying = !isPlaying;
 }
@@ -63,8 +69,8 @@ function playRandom() {
     const randomIndex = Math.floor(Math.random() * mp3Files.length);
     audio.src = mp3Files[randomIndex];
     audio.play();
-    isPlaying = true;
     document.querySelector('.play-pause-button').textContent = '驻乐';
+    isPlaying = true;
 }
 
 // 主题切换
