@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const initialPlayButton = document.getElementById('initial-play-button');
     const playPauseButton = document.querySelector('.play-pause-button');
     const nextButton = document.querySelector('.next-button');
     const themeButton = document.querySelector('.theme-button');
@@ -9,13 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const consoleButton = document.querySelector('.console-button');
     const dropdownButton = document.querySelector('.dropdown-button');
     const dropdownMenu = document.getElementById('dropdown-menu');
-    const controls = document.getElementById('controls');
-    
-    // 隐藏控制按钮
-    controls.classList.add('hidden');
 
     // 添加事件监听器
-    initialPlayButton.addEventListener('click', initialPlay);
     playPauseButton.addEventListener('click', togglePlayPause);
     nextButton.addEventListener('click', playRandom);
     themeButton.addEventListener('click', toggleTheme);
@@ -53,12 +47,6 @@ const mp3Files = [
     'music/youjianchuiyan.mp3'
 ];
 let isPlaying = false;
-
-function initialPlay() {
-    document.getElementById('initial-play-button').classList.add('hidden');
-    document.getElementById('controls').classList.remove('hidden');
-    playRandom();
-}
 
 function togglePlayPause() {
     if (isPlaying) {
