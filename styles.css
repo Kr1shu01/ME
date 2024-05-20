@@ -55,7 +55,7 @@ header p {
 
 .button-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, auto); /* 改为3列以适应更多按钮 */
     grid-gap: 10px;
     margin-left: 20px;
 }
