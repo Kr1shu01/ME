@@ -10,6 +10,17 @@
 <body>
     <header>
         <div class="header-content">
+            <div class="button-grid">
+                <button class="play-pause-button">流音</button>
+                <button class="next-button">迭曲</button>
+                <button class="menu-button" onclick="toggleMenu()">鸣辞</button>
+                <button class="theme-button">易彩</button>
+                <button class="empty-button"></button>
+                <button class="relax-button">寻秘</button>
+                <button class="ac-button">风吟</button>
+                <button class="tv-button">雅幕</button>
+                <button class="console-button">颂境</button>
+            </div>
             <img src="images/Evelynn2.png" alt="头像">
             <div>
                 <h1>KRISHU</h1>
@@ -30,22 +41,6 @@
         </nav>
     </header>
     <main>
-        <div class="button-container">
-            <button class="play-pause-button">流音</button>
-            <button class="next-button">迭曲</button>
-            <button class="menu-button">鸣辞</button>
-            <button class="theme-button">易彩</button>
-            <button class="empty-button"></button>
-            <button class="relax-button">寻秘</button>
-            <button class="ac-button">风吟</button>
-            <button class="tv-button">雅幕</button>
-            <button class="console-button">颂境</button>
-        </div>
-        <div id="dropdown-menu" class="dropdown-menu">
-            <a href="#" onclick="navigateToLink('https://www.bilibili.com/video/BV1xa411e7SC/?share_source=copy_web&vd_source=2fb33c4bf969e78e1d2f94a3f11bee75')">五月的花海</a>
-            <a href="#" onclick="navigateToLink('https://mp.weixin.qq.com/s/VkcuAT4JkAW3a8F90HUiyQ')">启航未来</a>
-            <a href="#" onclick="navigateToLink('https://v.qq.com/x/cover/mzc002002kqssyu/q4100vjztwh.html?j_vid=y41007hixcp&j_cut_vid=x4100fe2yzq&j_is_win_vid=1&j_start=0')">融媒体之歌</a>
-        </div>
         <div class="content">
             <div class="row">
                 <section id="about" class="about"><h2>个人简介</h2><p>在写作之路上踌躇前行，但是会一直热爱写作，哪怕山崩地裂，海枯石烂。</p></section>
@@ -72,6 +67,11 @@
     <footer>
         <p>联系方式：15979595635</p>
     </footer>
+    <div id="menu" class="menu hidden">
+        <a href="https://www.bilibili.com/video/BV1xa411e7SC/?share_source=copy_web&vd_source=2fb33c4bf969e78e1d2f94a3f11bee75">五月的花海</a>
+        <a href="https://mp.weixin.qq.com/s/VkcuAT4JkAW3a8F90HUiyQ">启航未来</a>
+        <a href="https://v.qq.com/x/cover/mzc002002kqssyu/q4100vjztwh.html?j_vid=y41007hixcp&j_cut_vid=x4100fe2yzq&j_is_win_vid=1&j_start=0">融媒体之歌</a>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
