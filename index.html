@@ -13,8 +13,8 @@
             <div class="button-container">
                 <button id="initial-play-button" class="play-button" onclick="initialPlay()">播放背景音乐</button>
                 <div id="controls" class="hidden">
-                    <button class="play-pause-button" onclick="togglePlayPause()">暂停</button>
-                    <button class="next-button" onclick="playNext()">下一首</button>
+                    <button class="play-pause-button">暂停</button>
+                    <button class="next-button">下一首</button>
                 </div>
                 <button class="ac-button" onclick="openAC()">打开小空调</button>
                 <button class="theme-button" onclick="toggleTheme()">切换主题颜色</button>
@@ -70,9 +70,7 @@
     <footer>
         <p>联系方式：15979595635</p>
     </footer>
-    <audio id="background-audio" loop>
-        <source src="lizhichangzhou.mp3" type="audio/mpeg">您的浏览器不支持音频元素。
-    </audio>
+    <audio id="background-audio" loop></audio>
 
     <!-- 添加透明按钮和下拉菜单 -->
     <div class="dropdown-container">
