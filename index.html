@@ -11,10 +11,9 @@
     <header>
         <div class="nav-container">
             <div class="button-container">
-                <button id="initial-play-button" class="play-button" onclick="initialPlay()">播放背景音乐</button>
-                <div id="controls" class="hidden">
-                    <button class="play-pause-button" onclick="togglePlayPause()">暂停</button>
-                    <button class="next-button" onclick="playRandom()">换歌</button>
+                <div id="controls">
+                    <button class="play-pause-button">播放</button>
+                    <button class="next-button">换歌</button>
                 </div>
                 <button class="ac-button" onclick="openAC()">打开小空调</button>
                 <button class="theme-button" onclick="toggleTheme()">切换主题颜色</button>
@@ -70,10 +69,7 @@
     <footer>
         <p>联系方式：15979595635</p>
     </footer>
-    <audio id="background-audio" loop>
-       您的浏览器不支持音频元素。
-    </audio>
-
+    
     <!-- 添加透明按钮和下拉菜单 -->
     <div class="dropdown-container">
         <button class="dropdown-button" onclick="toggleDropdown()"> </button>
