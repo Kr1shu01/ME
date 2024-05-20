@@ -41,7 +41,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 20px; /* 调整字体大小 */
+    font-size: 16px; /* 调整字体大小 */
     width: 80px; /* 设置按钮宽度 */
     height: 35px; /* 设置按钮高度 */
 }
