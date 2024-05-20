@@ -1,23 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('controls').classList.add('hidden');
-    document.body.addEventListener('click', function(event) {
-        if (event.target.matches('.play-button')) {
-            initialPlay();
-        } else if (event.target.matches('.play-pause-button')) {
+    document.getElementById('initial-play-button').addEventListener('click', initialPlay);
+
+    // Event delegation for buttons
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('play-pause-button')) {
             togglePlayPause();
-        } else if (event.target.matches('.next-button')) {
-            playNext();
-        } else if (event.target.matches('.theme-button')) {
+        } else if (event.target.classList.contains('next-button')) {
+            playRandom();
+        } else if (event.target.classList.contains('theme-button')) {
             toggleTheme();
-        } else if (event.target.matches('.relax-button')) {
+        } else if (event.target.classList.contains('relax-button')) {
             startRelax();
-        } else if (event.target.matches('.ac-button')) {
+        } else if (event.target.classList.contains('ac-button')) {
             openLink('https://wxurl.cn/PME');
-        } else if (event.target.matches('.tv-button')) {
+        } else if (event.target.classList.contains('tv-button')) {
             openLink('https://wxurl.cn/36C');
-        } else if (event.target.matches('.console-button')) {
+        } else if (event.target.classList.contains('console-button')) {
             openLink('http://yx.1dly.cn/');
-        } else if (event.target.matches('.dropdown-button')) {
+        } else if (event.target.classList.contains('dropdown-button')) {
             toggleDropdown();
         }
     });
@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownMenu.style.display = 'none';
         }
     });
+
+    // Ensure controls are hidden on page load
+    document.getElementById('controls').classList.add('hidden');
 });
 
 const audio = document.getElementById('background-audio');
@@ -77,21 +80,6 @@ function playRandom() {
     document.querySelector('.play-pause-button').textContent = '暂停';
 }
 
-function playNext() {
-    playRandom();
-}
-
-function toggleDropdown(event) {
-    event.stopPropagation(); // Prevent event from bubbling up
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-}
-
-
-function navigateToLink(videoLink) {
-    window.open(videoLink, '_blank');
-}
-
 // 主题切换
 const themes = [
     { bg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)', secBg: 'linear-gradient(45deg, #FFCC99, #FFA07A)' },
@@ -111,6 +99,7 @@ function toggleTheme() {
     document.querySelector('footer').style.background = theme.bg;
 }
 
+// 轻松一下按钮
 function startRelax() {
     const games = [
         'https://play2048.co/', 'https://playsnake.org/', 'https://hextris.io/', 'https://sudoku.com/',
@@ -120,6 +109,17 @@ function startRelax() {
     window.open(games[Math.floor(Math.random() * games.length)], '_blank');
 }
 
+// 外部链接按钮
 function openLink(url) {
     window.open(url, '_blank');
+}
+
+// 下拉菜单
+function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+}
+
+function navigateToLink(videoLink) {
+    window.open(videoLink, '_blank');
 }
