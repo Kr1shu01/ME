@@ -55,7 +55,7 @@ header p {
 
 .button-container {
     display: grid; /* 使用网格布局 */
-    grid-template-columns: repeat(2, auto); /* 设置2列，每列宽度自动调整 */
+    grid-template-columns: repeat(3, auto); /* 设置3列，每列宽度自动调整 */
     grid-gap: 10px; /* 设置网格间距 */
     margin-left: 20px; /* 左外边距 */
 }
@@ -206,19 +206,6 @@ footer p {
     bottom: 20px; /* 距底部20px */
     left: 20px; /* 距左边20px */
     z-index: 1000; /* 层级高于其他元素 */
-}
-
-.dropdown-button {
-    background-color: transparent; /* 背景色透明 */
-    border: none; /* 无边框 */
-    width: 100px; /* 宽度100px */
-    height: 50px; /* 高度50px */
-    cursor: pointer; /* 鼠标指针样式 */
-    opacity: 0.5; /* 透明度 */
-}
-
-.dropdown-button:hover {
-    opacity: 1; /* 鼠标悬停时透明度变为1 */
 }
 
 .dropdown-menu {
