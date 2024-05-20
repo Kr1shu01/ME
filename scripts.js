@@ -1,15 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('initial-play-button').addEventListener('click', initialPlay);
-    document.querySelector('.play-pause-button').addEventListener('click', togglePlayPause);
-    document.querySelector('.next-button').addEventListener('click', playNext);
+    document.body.addEventListener('click', function(event) {
+        if (event.target.matches('.play-button')) {
+            initialPlay();
+        } else if (event.target.matches('.play-pause-button')) {
+            togglePlayPause();
+        } else if (event.target.matches('.next-button')) {
+            playNext();
+        } else if (event.target.matches('.theme-button')) {
+            toggleTheme();
+        } else if (event.target.matches('.relax-button')) {
+            startRelax();
+        } else if (event.target.matches('.ac-button')) {
+            openLink('https://wxurl.cn/PME');
+        } else if (event.target.matches('.tv-button')) {
+            openLink('https://wxurl.cn/36C');
+        } else if (event.target.matches('.console-button')) {
+            openLink('http://yx.1dly.cn/');
+        } else if (event.target.matches('.dropdown-button')) {
+            toggleDropdown();
+        }
+    });
 
-    document.querySelector('.theme-button').addEventListener('click', toggleTheme);
-    document.querySelector('.relax-button').addEventListener('click', startRelax);
-    document.querySelector('.ac-button').addEventListener('click', () => openLink('https://wxurl.cn/PME'));
-    document.querySelector('.tv-button').addEventListener('click', () => openLink('https://wxurl.cn/36C'));
-    document.querySelector('.console-button').addEventListener('click', () => openLink('http://yx.1dly.cn/'));
-
-    document.querySelector('.dropdown-button').addEventListener('click', toggleDropdown);
     document.addEventListener('click', function(event) {
         const dropdownContainer = document.querySelector('.dropdown-container');
         const dropdownMenu = document.getElementById('dropdown-menu');
@@ -65,6 +76,10 @@ function playRandom() {
     document.querySelector('.play-pause-button').textContent = '暂停';
 }
 
+function playNext() {
+    playRandom();
+}
+
 // 主题切换
 const themes = [
     { bg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)', secBg: 'linear-gradient(45deg, #FFCC99, #FFA07A)' },
@@ -72,7 +87,6 @@ const themes = [
     { bg: 'linear-gradient(90deg, #3CB371, #2E8B57)', secBg: 'linear-gradient(45deg, #98FB98, #00FA9A)' }
 ];
 let currentTheme = 0;
-document.querySelector('.theme-button').addEventListener('click', toggleTheme);
 
 function toggleTheme() {
     currentTheme = (currentTheme + 1) % themes.length;
@@ -85,8 +99,6 @@ function toggleTheme() {
     document.querySelector('footer').style.background = theme.bg;
 }
 
-// 轻松一下按钮
-document.querySelector('.relax-button').addEventListener('click', startRelax);
 function startRelax() {
     const games = [
         'https://play2048.co/', 'https://playsnake.org/', 'https://hextris.io/', 'https://sudoku.com/',
@@ -96,27 +108,16 @@ function startRelax() {
     window.open(games[Math.floor(Math.random() * games.length)], '_blank');
 }
 
-// 外部链接按钮
-document.querySelector('.ac-button').addEventListener('click', () => openLink('https://wxurl.cn/PME'));
-document.querySelector('.tv-button').addEventListener('click', () => openLink('https://wxurl.cn/36C'));
-document.querySelector('.console-button').addEventListener('click', () => openLink('http://yx.1dly.cn/'));
 function openLink(url) {
     window.open(url, '_blank');
 }
 
 // 下拉菜单
-document.querySelector('.dropdown-button').addEventListener('click', toggleDropdown);
 function toggleDropdown() {
     const dropdownMenu = document.getElementById('dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 }
-document.addEventListener('click', function(event) {
-    const dropdownContainer = document.querySelector('.dropdown-container');
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    if (!dropdownContainer.contains(event.target)) {
-        dropdownMenu.style.display = 'none';
-    }
-});
+
 function navigateToLink(videoLink) {
     window.open(videoLink, '_blank');
 }
