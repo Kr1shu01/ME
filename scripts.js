@@ -51,10 +51,10 @@ let isPlaying = false;
 function togglePlayPause() {
     if (isPlaying) {
         audio.pause();
-        document.querySelector('.play-pause-button').textContent = '播放';
+        document.querySelector('.play-pause-button').textContent = '流音';
     } else {
         audio.play();
-        document.querySelector('.play-pause-button').textContent = '暂停';
+        document.querySelector('.play-pause-button').textContent = '驻乐';
     }
     isPlaying = !isPlaying;
 }
