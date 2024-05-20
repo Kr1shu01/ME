@@ -1,15 +1,51 @@
-function playAudio() {
-    const audio = document.getElementById('background-audio');
-    audio.paused ? audio.play() : audio.pause();
+const audio = document.getElementById('background-audio');
+const mp3Files = [
+    'path/to/your/mp3/directory/music1.mp3',
+    'path/to/your/mp3/directory/music2.mp3',
+    'path/to/your/mp3/directory/music3.mp3'
+];
+let isPlaying = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('initial-play-button').addEventListener('click', initialPlay);
+    document.querySelector('.play-pause-button').addEventListener('click', togglePlayPause);
+    document.querySelector('.next-button').addEventListener('click', playRandom);
+});
+
+function initialPlay() {
+    document.getElementById('initial-play-button').classList.add('hidden');
+    document.getElementById('controls').classList.remove('hidden');
+    playRandom();
 }
 
+function togglePlayPause() {
+    if (isPlaying) {
+        audio.pause();
+        document.querySelector('.play-pause-button').textContent = '播放';
+    } else {
+        audio.play();
+        document.querySelector('.play-pause-button').textContent = '暂停';
+    }
+    isPlaying = !isPlaying;
+}
+
+function playRandom() {
+    const randomIndex = Math.floor(Math.random() * mp3Files.length);
+    audio.src = mp3Files[randomIndex];
+    audio.play();
+    isPlaying = true;
+    document.querySelector('.play-pause-button').textContent = '暂停';
+}
+
+// 主题切换
 const themes = [
     { bg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)', secBg: 'linear-gradient(45deg, #FFCC99, #FFA07A)' },
     { bg: 'linear-gradient(90deg, #00BFFF, #1E90FF)', secBg: 'linear-gradient(45deg, #ADD8E6, #87CEFA)' },
     { bg: 'linear-gradient(90deg, #3CB371, #2E8B57)', secBg: 'linear-gradient(45deg, #98FB98, #00FA9A)' }
 ];
-
 let currentTheme = 0;
+document.querySelector('.theme-button').addEventListener('click', toggleTheme);
+
 function toggleTheme() {
     currentTheme = (currentTheme + 1) % themes.length;
     const theme = themes[currentTheme];
@@ -21,6 +57,8 @@ function toggleTheme() {
     document.querySelector('footer').style.background = theme.bg;
 }
 
+// 轻松一下按钮
+document.querySelector('.relax-button').addEventListener('click', startRelax);
 function startRelax() {
     const games = [
         'https://play2048.co/',
@@ -32,33 +70,23 @@ function startRelax() {
         'https://proxx.app/',
         'https://pinball.flutter.dev/'
     ];
-    const randomGame = games[Math.floor(Math.random() * games.length)];
-    window.open(randomGame, '_blank');
+    window.open(games[Math.floor(Math.random() * games.length)], '_blank');
 }
 
-function openAC() {
-    window.open('https://wxurl.cn/PME', '_blank');
+// 外部链接按钮
+document.querySelector('.ac-button').addEventListener('click', () => openLink('https://wxurl.cn/PME'));
+document.querySelector('.tv-button').addEventListener('click', () => openLink('https://wxurl.cn/36C'));
+document.querySelector('.console-button').addEventListener('click', () => openLink('http://yx.1dly.cn/'));
+function openLink(url) {
+    window.open(url, '_blank');
 }
 
-function openTV() {
-    window.open('https://wxurl.cn/36C', '_blank');
-}
-
-function openConsole() {
-    window.open('http://yx.1dly.cn/', '_blank');
-}
-
-// 添加透明按钮和下拉菜单的功能
+// 下拉菜单
+document.querySelector('.dropdown-button').addEventListener('click', toggleDropdown);
 function toggleDropdown() {
     const dropdownMenu = document.getElementById('dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 }
-
-function navigateToLink(videoLink) {
-    window.open(videoLink, '_blank');
-}
-
-// 点击页面其他地方时隐藏下拉菜单
 document.addEventListener('click', function(event) {
     const dropdownContainer = document.querySelector('.dropdown-container');
     const dropdownMenu = document.getElementById('dropdown-menu');
@@ -66,3 +94,6 @@ document.addEventListener('click', function(event) {
         dropdownMenu.style.display = 'none';
     }
 });
+function navigateToLink(videoLink) {
+    window.open(videoLink, '_blank');
+}
