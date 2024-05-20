@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('initial-play-button').addEventListener('click', initialPlay);
     document.getElementById('controls').classList.add('hidden');
+
     // Event delegation for buttons
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('play-pause-button')) {
