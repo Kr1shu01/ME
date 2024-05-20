@@ -81,10 +81,12 @@ function playNext() {
     playRandom();
 }
 
-function toggleDropdown() {
+function toggleDropdown(event) {
+    event.stopPropagation(); // Prevent event from bubbling up
     const dropdownMenu = document.getElementById('dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 }
+
 
 function navigateToLink(videoLink) {
     window.open(videoLink, '_blank');
