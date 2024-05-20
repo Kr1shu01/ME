@@ -1,248 +1,248 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, #FF69B4, #FFB6C1);
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    color: #333;
-    transition: background 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 设置字体样式 */
+    font-size: 16px; /* 设置字体大小 */
+    margin: 0; /* 移除边距 */
+    padding: 0; /* 移除内填充 */
+    background: linear-gradient(90deg, #FF69B4, #FFB6C1); /* 设置背景为从左到右的渐变色 */
+    display: flex; /* 使用弹性盒模型布局 */
+    flex-direction: column; /* 设置弹性容器的主轴方向为垂直方向 */
+    height: 100vh; /* 设置高度为视口的100% */
+    color: #333; /* 设置文本颜色 */
+    transition: background 0.5s ease; /* 设置背景色变化动画 */
 }
 
 header {
-    background: linear-gradient(90deg, #FF69B4, #FFB6C1);
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: background 0.3s ease;
+    background: linear-gradient(90deg, #FF69B4, #FFB6C1); /* 设置渐变背景色 */
+    color: white; /* 设置文本颜色为白色 */
+    padding: 20px; /* 设置内填充 */
+    display: flex; /* 使用弹性盒模型布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between; /* 水平方向两端对齐 */
+    transition: background 0.5s ease; /* 背景色变化动画 */
 }
 
 .header-content {
-    display: flex;
-    align-items: center;
-    padding-left: 20px; /* 调整这个值来改变头像和标题离左边的距离 */
+    display: flex; /* 使用弹性盒模型布局 */
+    align-items: center; /* 垂直居中对齐 */
+    padding-left: 20px; /* 设置左侧内填充 */
 }
 
 .header-content div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 调整这个值来改变标题和描述的对齐方式 */
+    display: flex; /* 使用弹性盒模型布局 */
+    flex-direction: column; /* 设置为垂直堆叠布局 */
+    align-items: flex-start; /* 水平左对齐 */
 }
 
 header img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-    border: 3px solid white;
+    border-radius: 50%; /* 设置图片为圆形 */
+    width: 80px; /* 设置宽度 */
+    height: 80px; /* 设置高度 */
+    margin-right: 20px; /* 右边距 */
+    border: 3px solid white; /* 白色边框 */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    margin: 0; /* 移除外边距 */
+    font-size: 2.5em; /* 设置字体大小 */
 }
 
 header p {
-    margin: 5px 0 0;
-    font-size: 1.2em;
-    color: #9932CC;
-    text-align: left; /* 调整这个值来改变描述的对齐方式 */
+    margin: 5px 0 0; /* 设置上边距 */
+    font-size: 1.2em; /* 设置字体大小 */
+    color: #9932CC; /* 设置文本颜色 */
+    text-align: left; /* 左对齐文本 */
 }
 
 .button-container {
-    display: grid;
-    grid-template-columns: repeat(3, auto); /* 改为3列以适应更多按钮 */
-    grid-gap: 10px;
-    margin-left: 20px;
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(2, auto); /* 设置三列，每列宽度自动调整 */
+    grid-gap: 10px; /* 设置网格间距 */
+    margin-left: 20px; /* 左外边距 */
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #BA55D3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 20px; /* 设置内填充 */
+    background-color: #BA55D3; /* 设置背景颜色 */
+    color: white; /* 设置文本颜色 */
+    border: none; /* 移除边框 */
+    border-radius: 5px; /* 设置圆角 */
+    cursor: pointer; /* 设置鼠标样式为指针 */
 }
 
 button:hover {
-    background-color: #9932CC;
+    background-color: #9932CC; /* 鼠标悬停时的背景颜色 */
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    display: flex; /* 使用弹性盒模型布局 */
+    justify-content: space-between; /* 水平方向两端对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    width: 100%; /* 设置宽度为100% */
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 50%;
+    display: flex; /* 使用弹性盒模型布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    align-items: center; /* 垂直居中对齐 */
+    width: 50%; /* 设置宽度为50% */
 }
 
 nav a {
-    color: #ffffff;
-    margin: 0 5px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    text-align: center;
-    width: 18%;
-    box-sizing: border-box;
-    padding: 10px 0;
+    color: #ffffff; /* 设置链接文本颜色为白色 */
+    margin: 0 5px; /* 设置水平方向的外边距 */
+    text-decoration: none; /* 移除下划线 */
+    font-size: 18px; /* 设置字体大小 */
+    transition: color 0.3s ease; /* 设置颜色变化动画 */
+    text-align: center; /* 文本居中 */
+    width: 18%; /* 设置宽度 */
+    box-sizing: border-box; /* 盒模型设置 */
+    padding: 10px 0; /* 设置垂直内填充 */
 }
 
 nav a:hover {
-    color: #9400D3;
+    color: #9400D3; /* 鼠标悬停时的文本颜色 */
 }
 
 main {
-    display: flex;
-    flex: 1;
-    background: linear-gradient(90deg, #FF69B4, #FFB6C1);
-    transition: background 0.3s ease;
+    display: flex; /* 使用弹性盒模型布局 */
+    flex: 1; /* 占用剩余空间 */
+    background: linear-gradient(90deg, #FF69B4, #FFB6C1); /* 设置渐变背景色 */
+    transition: background 0.5s ease; /* 背景色变化动画 */
 }
 
 .content {
-    flex: 1;
-    padding: 40px;
-    background: linear-gradient(90deg, #FF69B4, #FFB6C1);
-    box-shadow: -10px 0 20px rgba(0,0,0,0.1);
-    transition: background 0.3s ease;
+    flex: 1; /* 占用剩余空间 */
+    padding: 40px; /* 设置内填充 */
+    background: linear-gradient(90deg, #FF69B4, #FFB6C1); /* 设置渐变背景色 */
+    box-shadow: -10px 0 20px rgba(0,0,0,0.1); /* 设置阴影 */
+    transition: background 0.5s ease; /* 背景色变化动画 */
 }
 
 .content .row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+    display: flex; /* 使用弹性盒模型布局 */
+    justify-content: space-between; /* 子项间距平均分配 */
+    margin-bottom: 40px; /* 下边距 */
 }
 
 .content section {
-    flex: 1;
-    margin: 0 10px;
-    padding: 20px;
-    background: linear-gradient(45deg, #FFCC99, #FFA07A);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    transition: background 0.3s ease;
+    flex: 1; /* 占用剩余空间 */
+    margin: 0 10px; /* 水平外边距 */
+    padding: 20px; /* 内填充 */
+    background: linear-gradient(45deg, #FFCC99, #FFA07A); /* 设置渐变背景色 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 设置阴影 */
+    border-radius: 10px; /* 设置圆角 */
+    transition: background 1.0s ease; /* 背景色变化动画 */
 }
 
 h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 22px; /* 设置字体大小 */
+    margin-bottom: 10px; /* 下外边距 */
 }
 
-.about h2 { color: #20B2AA; }
-.experience h2 { color: #6495ED; }
-.projects h2 { color: #7B68EE; }
-.skills h2 { color: #EE82EE; }
-.education h2 { color: #FF6347; }
-.hobbies h2 { color: #D2691E; }
-.blog h2 { color: #808000; }
-.book-notes h2 { color: #32CD32; }
-.music-festival h2 { color: #2E8B57; }
-.civilization h2 { color: #000000; }
+.about h2 { color: #20B2AA; } /* 个人简介标题颜色 */
+.experience h2 { color: #6495ED; } /* 工作经历标题颜色 */
+.projects h2 { color: #7B68EE; } /* 项目展示标题颜色 */
+.skills h2 { color: #EE82EE; } /* 专业技能标题颜色 */
+.education h2 { color: #FF6347; } /* 教育背景标题颜色 */
+.hobbies h2 { color: #D2691E; } /* 个人爱好标题颜色 */
+.blog h2 { color: #808000; } /* 博客文章标题颜色 */
+.book-notes h2 { color: #32CD32; } /* 读书摘录标题颜色 */
+.music-festival h2 { color: #2E8B57; } /* 音乐盛典标题颜色 */
+.civilization h2 { color: #000000; } /* 晓以文明标题颜色 */
 
 p {
-    font-size: 16px;
-    color: #228B22;
+    font-size: 16px; /* 设置字体大小 */
+    color: #228B22; /* 设置文本颜色 */
 }
 
 footer {
-    background: linear-gradient(90deg, #FF69B4, #FFB6C1);
-    text-align: center;
-    padding: 20px;
-    transition: background 0.3s ease;
+    background: linear-gradient(90deg, #FF69B4, #FFB6C1); /* 设置渐变背景色 */
+    text-align: center; /* 文本居中 */
+    padding: 20px; /* 内填充 */
+    transition: background 0.5s ease; /* 背景色变化动画 */
 }
 
 footer p {
-    color: #ffffff;
+    color: #ffffff; /* 设置文本颜色为白色 */
 }
 
 .title-with-icon {
-    display: flex;
-    align-items: center;
+    display: flex; /* 使用弹性盒模型布局 */
+    align-items: center; /* 垂直居中对齐 */
 }
 
 .icon {
-    width: 20px;  /* 设置图标宽度 */
-    height: 20px; /* 设置图标高度 */
-    margin-right: 8px; /* 图标与文字之间的间距 */
+    width: 20px; /* 图标宽度 */
+    height: 20px; /* 图标高度 */
+    margin-right: 8px; /* 右外边距 */
 }
 
 /* 播放暂停样式 */
 .hidden {
-    display: none;
+    display: none; /* 隐藏元素 */
 }
 
 #controls {
-    display: flex;
-    gap: 10px;
+    display: flex; /* 使用弹性盒模型布局 */
+    gap: 10px; /* 元素间距 */
 }
 
 .play-pause-button, .next-button {
-    padding: 10px 20px;
-    background-color: #BA55D3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 10px; /* 内填充 */
+    background-color: #BA55D3; /* 背景颜色 */
+    color: white; /* 文本颜色 */
+    border: none; /* 移除边框 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针样式 */
 }
 
 .play-pause-button:hover, .next-button:hover {
-    background-color: #9932CC;
+    background-color: #9932CC; /* 鼠标悬停时的背景色 */
 }
 
 /* 透明按钮样式 */
 .dropdown-container {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    z-index: 1000;
+    position: fixed; /* 固定定位 */
+    bottom: 10px; /* 距底部10px */
+    left: 10px; /* 距左边10px */
+    z-index: 1000; /* 层级高于其他元素 */
 }
 
 .dropdown-button {
-    background-color: transparent;
-    border: none;
-    width: 100px; 
-    height: 50px;
-    cursor: pointer;
-    opacity: 0.5;
+    background-color: transparent; /* 背景透明 */
+    border: none; /* 移除边框 */
+    width: 100px; /* 宽度 */
+    height: 50px; /* 高度 */
+    cursor: pointer; /* 鼠标指针样式 */
+    opacity: 0.5; /* 透明度 */
 }
 
 .dropdown-button:hover {
-    opacity: 1;
+    opacity: 0.8; /* 鼠标悬停时透明度变为0.8*/
 }
 
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1001;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 150px; 
+    display: none; /* 默认不显示 */
+    position: absolute; /* 绝对定位 */
+    bottom: 60px; /* 距底部60px */
+    left: 0; /* 左对齐 */
+    background-color: rgba(255, 255, 255, 0.9); /* 背景半透明白色 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    z-index: 1001; /* 层级 */
+    border-radius: 5px; /* 圆角 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    width: 150px; /* 宽度 */
 }
 
 .dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
-    font-size: 16px; /* 设置文字大小 */
+    display: block; /* 块状元素 */
+    padding: 10px 20px; /* 内填充 */
+    text-decoration: none; /* 去除下划线 */
+    color: #333; /* 文本颜色 */
+    background-color: rgba(255, 255, 255, 0.8); /* 背景颜色 */
+    font-size: 16px; /* 字体大小 */
 }
 
 .dropdown-menu a:hover {
-    background-color: rgba(200, 200, 200, 0.8);
+    background-color: rgba(200, 200, 200, 0.8); /* 鼠标悬停时的背景色 */
 }
