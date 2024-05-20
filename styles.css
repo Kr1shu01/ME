@@ -42,8 +42,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px; /* 调整字体大小 */
-    width: 150px; /* 设置按钮宽度 */
-    height: 60px; /* 设置按钮高度 */
+    width: 120px; /* 设置按钮宽度 */
+    height: 50px; /* 设置按钮高度 */
 }
 
 button:hover {
