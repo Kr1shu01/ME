@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownButton = document.querySelector('.dropdown-button');
     const dropdownMenu = document.getElementById('dropdown-menu');
     const controls = document.getElementById('controls');
+    
+    // 隐藏控制按钮
+    controls.classList.add('hidden');
 
+    // 添加事件监听器
     initialPlayButton.addEventListener('click', initialPlay);
     playPauseButton.addEventListener('click', togglePlayPause);
     nextButton.addEventListener('click', playRandom);
@@ -21,13 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     consoleButton.addEventListener('click', () => openLink('http://yx.1dly.cn/'));
     dropdownButton.addEventListener('click', toggleDropdown);
 
+    // 隐藏下拉菜单
     document.addEventListener('click', function (event) {
         if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
             dropdownMenu.style.display = 'none';
         }
     });
-
-    document.getElementById('controls').classList.add('hidden');
 });
 
 const audio = new Audio();
