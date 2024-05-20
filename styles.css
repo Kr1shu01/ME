@@ -203,24 +203,22 @@ footer p {
 /* 透明按钮样式 */
 .dropdown-container {
     position: fixed; /* 固定定位 */
-    bottom: 20px; /* 距底部10px */
-    left: 20px; /* 距左边10px */
+    bottom: 20px; /* 距底部20px */
+    left: 20px; /* 距左边20px */
     z-index: 1000; /* 层级高于其他元素 */
 }
 
 .dropdown-button {
-    background-color: transparent;
-    border: none;
-    width: 100px;
-    height: 50px;
-    cursor: pointer;
-    opacity: 0.5; /* 确保这不会影响点击 */
-    pointer-events: auto; /* 确保此属性没有设置为 'none' */
+    background-color: transparent; /* 背景色透明 */
+    border: none; /* 无边框 */
+    width: 100px; /* 宽度100px */
+    height: 50px; /* 高度50px */
+    cursor: pointer; /* 鼠标指针样式 */
+    opacity: 0.5; /* 透明度 */
 }
 
-
 .dropdown-button:hover {
-    opacity: 0.8; /* 鼠标悬停时透明度变为0.8*/
+    opacity: 1; /* 鼠标悬停时透明度变为1 */
 }
 
 .dropdown-menu {
@@ -233,7 +231,7 @@ footer p {
     z-index: 1001; /* 层级 */
     border-radius: 5px; /* 圆角 */
     overflow: hidden; /* 隐藏溢出内容 */
-    width: 150px; /* 宽度 */
+    width: 150px; /* 宽度150px */
 }
 
 .dropdown-menu a {
