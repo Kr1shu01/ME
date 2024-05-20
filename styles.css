@@ -188,7 +188,7 @@ footer p {
 }
 
 .play-pause-button, .next-button {
-    padding: 10px 10px; /* 内填充 */
+    padding: 10px 15px; /* 内填充 */
     background-color: #BA55D3; /* 背景颜色 */
     color: white; /* 文本颜色 */
     border: none; /* 移除边框 */
@@ -209,13 +209,15 @@ footer p {
 }
 
 .dropdown-button {
-    background-color: transparent; /* 背景透明 */
-    border: none; /* 移除边框 */
-    width: 100px; /* 宽度 */
-    height: 50px; /* 高度 */
-    cursor: pointer; /* 鼠标指针样式 */
-    opacity: 0.5; /* 透明度 */
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.5; /* 确保这不会影响点击 */
+    pointer-events: auto; /* 确保此属性没有设置为 'none' */
 }
+
 
 .dropdown-button:hover {
     opacity: 0.8; /* 鼠标悬停时透明度变为0.8*/
