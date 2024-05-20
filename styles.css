@@ -55,7 +55,7 @@ header p {
 
 .button-container {
     display: grid; /* 使用网格布局 */
-    grid-template-columns: repeat(2, auto); /* 设置三列，每列宽度自动调整 */
+    grid-template-columns: repeat(2, auto); /* 设置2列，每列宽度自动调整 */
     grid-gap: 10px; /* 设置网格间距 */
     margin-left: 20px; /* 左外边距 */
 }
@@ -188,7 +188,7 @@ footer p {
 }
 
 .play-pause-button, .next-button {
-    padding: 10px 15px; /* 内填充 */
+    padding: 10px 20px; /* 内填充 */
     background-color: #BA55D3; /* 背景颜色 */
     color: white; /* 文本颜色 */
     border: none; /* 移除边框 */
@@ -203,8 +203,8 @@ footer p {
 /* 透明按钮样式 */
 .dropdown-container {
     position: fixed; /* 固定定位 */
-    bottom: 10px; /* 距底部10px */
-    left: 10px; /* 距左边10px */
+    bottom: 20px; /* 距底部10px */
+    left: 20px; /* 距左边10px */
     z-index: 1000; /* 层级高于其他元素 */
 }
 
