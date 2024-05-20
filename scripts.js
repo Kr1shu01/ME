@@ -64,7 +64,7 @@ function playRandom() {
     audio.src = mp3Files[randomIndex];
     audio.play();
     isPlaying = true;
-    document.querySelector('.play-pause-button').textContent = '暂停';
+    document.querySelector('.play-pause-button').textContent = '驻乐';
 }
 
 // 主题切换
