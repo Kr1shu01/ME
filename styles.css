@@ -177,6 +177,29 @@ footer p {
     margin-right: 8px; /* 图标与文字之间的间距 */
 }
 
+/* 播放暂停样式 */
+.hidden {
+    display: none;
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+}
+
+.play-pause-button, .next-button {
+    padding: 10px 20px;
+    background-color: #BA55D3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play-pause-button:hover, .next-button:hover {
+    background-color: #9932CC;
+}
+
 /* 透明按钮样式 */
 .dropdown-container {
     position: fixed;
