@@ -161,7 +161,7 @@ footer p {
     display: none;
     position: absolute;
     top: 0;
-    left: 120px; /* 确保菜单显示在按钮的右边 */
+    left: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1001;
