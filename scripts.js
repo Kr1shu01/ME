@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.console-button').addEventListener('click', () => openLink('http://yx.1dly.cn/'));
 
     document.querySelector('.dropdown-button').addEventListener('click', toggleDropdown);
-    
     document.addEventListener('click', function(event) {
         const dropdownContainer = document.querySelector('.dropdown-container');
         const dropdownMenu = document.getElementById('dropdown-menu');
@@ -36,8 +35,8 @@ const mp3Files = [
     'music/shuohaobuku.mp3', 'music/shuohaodexingfune.mp3', 'music/taotai.mp3', 'music/tingmamadehua.mp3',
     'music/turanhaoxiangni.mp3', 'music/wenrou.mp3', 'music/wish_you_were_gay.mp3', 'music/woyouchulianle.mp3',
     'music/xiangwozheyangderen.mp3', 'music/xiaochou.mp3', 'music/xiaojiuwo.mp3', 'music/xiaowangshu.mp3',
-    'music/xuanmu.mp3', 'music/yequ.mp3', 'music/yifuzhiming.mp3', 'music/yiluxiangbei.mp3',
-    'music/you_should_see_me_in_a_crown.mp3', 'music/youjianchuiyan.mp3'
+    'music/xuanmu.mp3', 'music/yequ.mp3', 'music/yifuzhiming.mp3', 'music/yiluxiangbei.mp3', 'music/you_should_see_me_in_a_crown.mp3',
+    'music/youjianchuiyan.mp3'
 ];
 let isPlaying = false;
 
@@ -66,10 +65,6 @@ function playRandom() {
     document.querySelector('.play-pause-button').textContent = '暂停';
 }
 
-function playNext() {
-    playRandom();
-}
-
 // 主题切换
 const themes = [
     { bg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)', secBg: 'linear-gradient(45deg, #FFCC99, #FFA07A)' },
@@ -77,6 +72,7 @@ const themes = [
     { bg: 'linear-gradient(90deg, #3CB371, #2E8B57)', secBg: 'linear-gradient(45deg, #98FB98, #00FA9A)' }
 ];
 let currentTheme = 0;
+document.querySelector('.theme-button').addEventListener('click', toggleTheme);
 
 function toggleTheme() {
     currentTheme = (currentTheme + 1) % themes.length;
@@ -90,31 +86,37 @@ function toggleTheme() {
 }
 
 // 轻松一下按钮
+document.querySelector('.relax-button').addEventListener('click', startRelax);
 function startRelax() {
     const games = [
-        'https://play2048.co/',
-        'https://playsnake.org/',
-        'https://hextris.io/',
-        'https://sudoku.com/',
-        'https://www.bubbleshooter.net/',
-        'https://liferestart.syaro.io/public/index.html',
-        'https://proxx.app/',
+        'https://play2048.co/', 'https://playsnake.org/', 'https://hextris.io/', 'https://sudoku.com/',
+        'https://www.bubbleshooter.net/', 'https://liferestart.syaro.io/public/index.html', 'https://proxx.app/',
         'https://pinball.flutter.dev/'
     ];
     window.open(games[Math.floor(Math.random() * games.length)], '_blank');
 }
 
 // 外部链接按钮
+document.querySelector('.ac-button').addEventListener('click', () => openLink('https://wxurl.cn/PME'));
+document.querySelector('.tv-button').addEventListener('click', () => openLink('https://wxurl.cn/36C'));
+document.querySelector('.console-button').addEventListener('click', () => openLink('http://yx.1dly.cn/'));
 function openLink(url) {
     window.open(url, '_blank');
 }
 
 // 下拉菜单
+document.querySelector('.dropdown-button').addEventListener('click', toggleDropdown);
 function toggleDropdown() {
     const dropdownMenu = document.getElementById('dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 }
-
+document.addEventListener('click', function(event) {
+    const dropdownContainer = document.querySelector('.dropdown-container');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    if (!dropdownContainer.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+    }
+});
 function navigateToLink(videoLink) {
     window.open(videoLink, '_blank');
 }
