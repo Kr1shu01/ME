@@ -80,6 +80,15 @@ function playNext() {
     playRandom();
 }
 
+function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+}
+
+function navigateToLink(videoLink) {
+    window.open(videoLink, '_blank');
+}
+
 // 主题切换
 const themes = [
     { bg: 'linear-gradient(90deg, #FF69B4, #FFB6C1)', secBg: 'linear-gradient(45deg, #FFCC99, #FFA07A)' },
@@ -110,14 +119,4 @@ function startRelax() {
 
 function openLink(url) {
     window.open(url, '_blank');
-}
-
-// 下拉菜单
-function toggleDropdown() {
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-}
-
-function navigateToLink(videoLink) {
-    window.open(videoLink, '_blank');
 }
