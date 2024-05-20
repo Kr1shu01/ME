@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('controls').classList.add('hidden');
     document.body.addEventListener('click', function(event) {
         if (event.target.matches('.play-button')) {
             initialPlay();
