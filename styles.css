@@ -167,6 +167,7 @@ footer p {
     z-index: 1001;
     border-radius: 5px;
     overflow: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .menu a {
