@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const acButton = document.querySelector('.ac-button');
     const tvButton = document.querySelector('.tv-button');
     const consoleButton = document.querySelector('.console-button');
-    
     const menuButton = document.querySelector('.menu-button');
     const menu = document.getElementById('menu');
 
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     acButton.addEventListener('click', () => openLink('https://wxurl.cn/PME'));
     tvButton.addEventListener('click', () => openLink('https://wxurl.cn/36C'));
     consoleButton.addEventListener('click', () => openLink('http://yx.1dly.cn/'));
-    menuButton.addEventListener('click', toggleMenu);
+    menuButton.addEventListener('click', () => toggleMenu(menu));
 
     // 隐藏下拉菜单
     document.addEventListener('click', function (event) {
@@ -117,16 +116,12 @@ function openLink(url) {
     window.open(url, '_blank');
 }
 
-
 // 下拉菜单
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    if (menu.style.visibility === 'visible') {
-        menu.style.visibility = 'hidden';
-        menu.style.opacity = 0;
+function toggleMenu(menuElement) {
+    if (menuElement.classList.contains('hidden')) {
+        menuElement.classList.remove('hidden');
     } else {
-        menu.style.visibility = 'visible';
-        menu.style.opacity = 1;
+        menuElement.classList.add('hidden');
     }
 }
 
