@@ -25,9 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
             menu.classList.add('hidden');
         }
-        if (!emptyButton.contains(event.target) && !emptyMenu.contains(event.target)) {
-            emptyMenu.classList.add('hidden');
-        }
     });
 
     // 添加菜单项点击事件监听器
@@ -122,11 +119,14 @@ function openLink(url) {
 
 
 // 下拉菜单
-function toggleMenu(menuElement) {
-    if (menuElement.style.display === 'block') {
-        menuElement.style.display = 'none';
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.visibility === 'visible') {
+        menu.style.visibility = 'hidden';
+        menu.style.opacity = 0;
     } else {
-        menuElement.style.display = 'block';
+        menu.style.visibility = 'visible';
+        menu.style.opacity = 1;
     }
 }
 
