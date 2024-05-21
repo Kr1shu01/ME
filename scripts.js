@@ -6,8 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const acButton = document.querySelector('.ac-button');
     const tvButton = document.querySelector('.tv-button');
     const consoleButton = document.querySelector('.console-button');
+    
     const menuButton = document.querySelector('.menu-button');
+    const emptyButton = document.querySelector('.empty-button');
     const menu = document.getElementById('menu');
+    const emptyMenu = document.getElementById('empty-menu');
 
     // 添加事件监听器
     playPauseButton.addEventListener('click', togglePlayPause);
@@ -18,11 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     tvButton.addEventListener('click', () => openLink('https://wxurl.cn/36C'));
     consoleButton.addEventListener('click', () => openLink('http://yx.1dly.cn/'));
     menuButton.addEventListener('click', toggleMenu);
+    emptyButton.addEventListener('click', toggleEmptyMenu);
 
     // 隐藏下拉菜单
     document.addEventListener('click', function (event) {
         if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
             menu.classList.add('hidden');
+        }
+        if (!emptyButton.contains(event.target) && !emptyMenu.contains(event.target)) {
+            emptyMenu.classList.add('hidden');
         }
     });
 
@@ -116,9 +123,14 @@ function openLink(url) {
     window.open(url, '_blank');
 }
 
+
 // 下拉菜单
 function toggleMenu() {
     const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+}
+function toggleEmptyMenu() {
+    const menu = document.getElementById('empty-menu');
     menu.classList.toggle('hidden');
 }
 
