@@ -17,12 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     acButton.addEventListener('click', () => openLink('https://wxurl.cn/PME'));
     tvButton.addEventListener('click', () => openLink('https://wxurl.cn/36C'));
     consoleButton.addEventListener('click', () => openLink('http://yx.1dly.cn/'));
-    menuButton.addEventListener('click', () => toggleMenu(menu));
+    menuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
 
     // 隐藏下拉菜单
-    document.addEventListener('click', function (event) {
+    document.addEventListener('click', (event) => {
         if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
-            menu.classList.add('hidden');
+            menu.style.display = 'none';
         }
     });
 
@@ -30,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.querySelectorAll('a').forEach(item => {
         item.addEventListener('click', (event) => {
             event.stopPropagation();  // 防止事件冒泡
-            menu.classList.add('hidden');  // 点击后隐藏菜单
+            menu.style.display = 'none';  // 点击后隐藏菜单
         });
     });
 });
