@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tvButton = document.querySelector('.tv-button');
     const consoleButton = document.querySelector('.console-button');
     const menuButton = document.querySelector('.menu-button');
-    const menu = document.getElementById('menu');
+    const menu = document.getElementById('dropdownMenu');
 
     // 添加事件监听器
     playPauseButton.addEventListener('click', togglePlayPause);
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     consoleButton.addEventListener('click', () => openLink('http://yx.1dly.cn/'));
     menuButton.addEventListener('click', (event) => {
         event.stopPropagation();
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        toggleDropdown();
     });
 
     // 隐藏下拉菜单
@@ -120,14 +120,11 @@ function openLink(url) {
 }
 
 // 下拉菜单
-function toggleMenu(menuElement) {
-    if (menuElement.classList.contains('hidden')) {
-        menuElement.classList.remove('hidden');
+function toggleDropdown() {
+    const dropdownContent = document.getElementById('dropdownMenu');
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
     } else {
-        menuElement.classList.add('hidden');
+        dropdownContent.style.display = 'block';
     }
-}
-
-function navigateToLink(videoLink) {
-    window.open(videoLink, '_blank');
 }
