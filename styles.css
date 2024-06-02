@@ -183,7 +183,8 @@ footer p {
     position: absolute;
     left: 100%;
     top: 0;
-    background-color: #f9f9f9;
+    margin-left: 10px;
+    background-color: #FFF0F5;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -197,7 +198,7 @@ footer p {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #D8BFD8;
 }
 
 .show {
