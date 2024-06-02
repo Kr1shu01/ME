@@ -121,10 +121,6 @@ function openLink(url) {
 
 // 下拉菜单
 function toggleDropdown() {
-    const dropdownContent = document.getElementById('dropdownMenu');
-    if (dropdownContent.style.display === 'block') {
-        dropdownContent.style.display = 'none';
-    } else {
-        dropdownContent.style.display = 'block';
-    }
+    var dropdown = document.getElementById("dropdownMenu");
+    dropdown.classList.toggle("show");
 }
