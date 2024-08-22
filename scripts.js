@@ -107,7 +107,7 @@ function toggleTheme() {
 // 轻松一下按钮
 function startRelax() {
     const games = [
-        'https://play2048.co/', 'https://playsnake.org/', 'https://hextris.io/', 'https://sudoku.com/',
+        'https://play2048.co/', 'https://playsnake.org/', 'https://www.crazygames.com/', 'https://sudoku.com/', 'https://www.addictinggames.com/',
         'https://www.bubbleshooter.net/', 'https://liferestart.syaro.io/public/index.html', 'https://proxx.app/',
         'https://pinball.flutter.dev/'
     ];
