@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playPauseButton = document.querySelector('.play-pause-button');
     const nextButton = document.querySelector('.next-button');
     const themeButton = document.querySelector('.theme-button');
+    const emptyButton = document.querySelector('.empty-button');
     const relaxButton = document.querySelector('.relax-button');
     const acButton = document.querySelector('.ac-button');
     const tvButton = document.querySelector('.tv-button');
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playPauseButton.addEventListener('click', togglePlayPause);
     nextButton.addEventListener('click', playRandom);
     themeButton.addEventListener('click', toggleTheme);
+    emptyButton.addEventListener('click', () => openLink('https://mystudy.cn'));
     relaxButton.addEventListener('click', startRelax);
     acButton.addEventListener('click', () => openLink('https://wxurl.cn/PME'));
     tvButton.addEventListener('click', () => openLink('https://wxurl.cn/36C'));
