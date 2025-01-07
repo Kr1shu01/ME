@@ -93,7 +93,7 @@ const themes = [
     { bg: 'linear-gradient(90deg, #00BFFF, #1E90FF)', secBg: 'linear-gradient(45deg, #ADD8E6, #87CEFA)' },
     { bg: 'linear-gradient(90deg, #3CB371, #2E8B57)', secBg: 'linear-gradient(45deg, #98FB98, #00FA9A)' }
 ];
-let currentTheme = 0;
+let currentTheme = 3;
 
 function toggleTheme() {
     currentTheme = (currentTheme + 1) % themes.length;
