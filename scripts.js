@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playPauseButton.addEventListener('click', togglePlayPause);
     nextButton.addEventListener('click', playRandom);
     themeButton.addEventListener('click', toggleTheme);
-    emptyButton.addEventListener('click', () => openLink('https://kr1shu01.github.io/MINE/'));
+    emptyButton.addEventListener('click', () => openLink('https://Kr1shu01.github.io/'));
     relaxButton.addEventListener('click', startRelax);
     acButton.addEventListener('click', () => openLink('https://wxurl.cn/PME'));
     tvButton.addEventListener('click', () => openLink('https://wxurl.cn/36C'));
