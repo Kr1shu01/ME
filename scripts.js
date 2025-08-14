@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     relaxButton.addEventListener('click', startRelax);
     acButton.addEventListener('click', () => openLink('https://wxurl.cn/PME'));
     tvButton.addEventListener('click', () => openLink('https://wxurl.cn/36C'));
-    consoleButton.addEventListener('click', () => openLink('https://raw.githubusercontent.com/Kr1shu01/AIIOAIIO/BOTs-Maze-World.html'));
+    consoleButton.addEventListener('click', () => openLink('https://kr1shu01.github.io/AIIOAIIO/'));
     menuButton.addEventListener('click', (event) => {
         event.stopPropagation();
         toggleDropdown();
